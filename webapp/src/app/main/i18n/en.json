@@ -1,0 +1,9 @@
+{
+    "SIDE_BAR": {
+        "NAV_EMPRESA": "Company",
+        "NAV_DEPARTAMENTO":"Department",
+        "NAV_OPERADOR":"Users",
+        "NAV_GRUPO_ACESSO":"Access Group",
+        "NAV_CADASTROS":"Register"
+    }
+}

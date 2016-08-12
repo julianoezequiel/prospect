@@ -1,0 +1,9 @@
+{
+    "SIDE_BAR": {
+        "NAV_EMPRESA": "Empresa",
+        "NAV_DEPARTAMENTO":"Departamento",
+        "NAV_OPERADOR":"Operador",
+        "NAV_GRUPO_ACESSO":"Grupo de Acesso",
+        "NAV_CADASTROS":"Cadastros"
+    }
+}

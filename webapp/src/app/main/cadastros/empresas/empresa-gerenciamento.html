@@ -1,0 +1,115 @@
+<div id="empresas-listar" class="page-layout simple right-sidenav" layout="row">
+
+  <!-- CENTER -->
+  <div class="center" flex ms-scroll>
+
+    <!-- HEADER -->
+    <div class="header md-accent-bg" layout="row" layout-align="space-between">
+      <div layout="column" layout-align="space-between">
+        <div class="breadcrumb" layout="row" layout-align="start center">
+          <md-icon md-font-icon="icon-home" ng-click="state.go('app.dashboards_main')" class="s16 hom"></md-icon>
+          <md-icon md-font-icon="icon-chevron-right" class="s16 separator"></md-icon>
+          <span class="parent">{{vm.id_cadastros|translate}}</span>
+          <md-icon md-font-icon="icon-chevron-right" class="s16 separator"></md-icon>
+          <span class="parent">{{vm.id_empresas|translate}}</span>
+        </div>
+        <div class="title">{{vm.id_empresas|translate}}</div>
+      </div>
+    </div>
+    <!-- / HEADER -->
+    <!-- CONTENT -->
+    <div class="content" layout="column">
+
+      <md-card>
+        <md-toolbar class="md-table-toolbar md-default" ng-show="!vm.options.rowSelection || !vm.selected.length">
+          <div class="md-toolbar-tools">
+            <md-button class="md-icon-button" ng-click="state.go('app.empresa')">
+              <md-icon md-font-icon="icon-arrow-left-bold-circle"></md-icon>
+              <md-tooltip>
+                {{vm.id_voltar|translate}}
+              </md-tooltip>
+            </md-button>
+          </div>
+        </md-toolbar>
+
+        <div layout="row">
+
+          <!-- BASIC FORM -->
+          <div class="form-wrapper md-whiteframe-1dp" flex>
+
+            <form name="basicForm" class="md-inline-form" novalidate>
+
+              <!-- <div class="form-title">Optional form title</div> -->
+
+              <div layout="column" layout-gt-xs="row">
+                <md-input-container flex>
+                  <label>{{'CAD_EMPRESA.RAZAO-SOCIAL' | translate }}</label>
+                  <input type="text" name="razaoSocial" ng-model="vm.empresa.razaoSocial"  required>
+                  <div ng-messages="basicForm.razaoSocial.$error" role="alert">
+                    <div ng-message="required">
+                      <span>{{'CRUD.CAMPO-OBRIGATORIO' | translate}}.</span>
+                    </div>
+                  </div>
+                </md-input-container>
+
+                <md-input-container flex class="md-block">
+                  <label>{{'CAD_EMPRESA.NOME-FANTASIA' | translate }}</label>
+                  <input type="text" name="nomeFantasia" ng-model="vm.empresa.fantasia" required>
+                  <div ng-messages="basicForm.nomeFantasia.$error" role="alert">
+                    <div ng-message="required">
+                      <span>{{'CRUD.CAMPO-OBRIGATORIO' | translate}}.</span>
+                    </div>
+                  </div>
+                </md-input-container>
+              </div>
+
+              <div layout="column" layout-gt-xs="row">
+                <md-input-container flex>
+                  <label>City</label>
+                  <input type="text" name="city" ng-model="vm.basicForm.city">
+                </md-input-container>
+
+                <md-input-container flex>
+                  <label>State</label>
+                  <md-select ng-model="vm.basicForm.state">
+                    <md-option ng-repeat="state in vm.states" value="{{state.abbrev}}">
+                      {{state.abbrev}}
+                    </md-option>
+                  </md-select>
+                </md-input-container>
+
+                <md-input-container flex>
+                  <label>Postal Code</label>
+                  <input name="postalcode" ng-model="vm.basicForm.postalCode" placeholder="12345" required ng-pattern="/^[0-9]{5}$/" md-maxlength="5">
+                  <div ng-messages="basicForm.postalcode.$error" role="alert" multiple>
+                    <div ng-message="required"><span>You must supply a postal code.</span></div>
+                    <div ng-message="pattern"><span>That doesn't look like a valid postal code.</span></div>
+                    <div ng-message="md-maxlength">
+                      <span>Postal code can't be longer than 5 characters.</span>
+                    </div>
+                  </div>
+                </md-input-container>
+              </div>
+
+              <md-input-container class="md-block">
+                <label>Biography</label>
+                <textarea ng-model="vm.basicForm.biography" columns="1" md-maxlength="150" rows="5"></textarea>
+              </md-input-container>
+
+              <md-button type="submit" class="md-raised md-accent" aria-label="Submit" ng-disabled="basicForm.$invalid || basicForm.$pristine">
+                Submit
+              </md-button>
+            </form>
+
+          </div>
+
+
+      </md-card>
+      <!-- </md-content> -->
+      </div>
+      <!-- / CONTENT -->
+
+
+    </div>
+  </div>
+</div>
