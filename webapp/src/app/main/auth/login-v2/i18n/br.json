@@ -1,0 +1,23 @@
+{
+    "LOGIN_V2": {
+        "INTRO_TITLE": "Bem vindo ao Prospect!",
+        "INTRO_DESCRIPTION": "Sistema para você encontrar a melhor proposta de serviço nas mais diversar areas.",
+        "TITLE": "Entar em sua conta",
+        "DESCRIPTION": "Sed mollis velit facilisis facilisis viverra",
+        "EMAIL": "Email",
+        "PASSWORD": "Senha",
+        "REMEMBER_ME": "Mater conectado",
+        "FORGOT_PASSWORD": "Esqueceu a senha?",
+        "LOG_IN": "Entar",
+        "OR": "ou",
+        "WITH_GOOGLE": "Entar com Google",
+        "WITH_FACEBOOK": "Entar com Facebook",
+        "DONT_HAVE_ACCOUNT": "Não possui caonta?",
+        "CREATE_ACCOUNT": "Criar uma conta",
+        "ERRORS": {
+            "EMAIL_REQUIRED": "Email obrigatório",
+            "EMAIL_MUST_VALID": "Email deve ser válido",
+            "PASSWORD_REQUIRED": "Senha obrigatória"
+        }
+    }
+}
