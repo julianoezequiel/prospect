@@ -21,7 +21,6 @@
 
       'app.dashboards',
       'app.cadastros',
-      'app.pages.auth.login',
-      'app.pages.auth.login-v2'
+      'app.auth'
     ]);
 })();

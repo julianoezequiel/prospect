@@ -113,6 +113,7 @@
          */
         function logout()
         {
+          $rootScope.state.go('app.pages_auth_login-v2');
             // Do logout here..
         }
 

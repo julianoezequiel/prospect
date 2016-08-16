@@ -13,7 +13,7 @@
         $stateProvider.state('app.pages_auth_login-v2', {
             url      : '/auth/login',
             views    : {
-                'main@'                          : {
+                'main@': {
                     templateUrl: 'app/core/layouts/content-only.html',
                     controller : 'MainController as vm'
                 },
