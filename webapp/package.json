@@ -3,6 +3,7 @@
   "version": "1.3.0",
   "dependencies": {
     "angular-material-data-table": "^0.10.9",
+    "angularfire": "^2.0.1",
     "font-awesome": "github:fortawesome/Font-Awesome"
   },
   "scripts": {

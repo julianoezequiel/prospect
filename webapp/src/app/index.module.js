@@ -21,6 +21,7 @@
 
       'app.dashboards',
       'app.cadastros',
-      'app.auth'
+      'app.auth',
+      'scpeFront'
     ]);
 })();
