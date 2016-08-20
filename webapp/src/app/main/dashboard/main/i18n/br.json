@@ -1,5 +1,8 @@
 {
     "SIDE_BAR": {
         "NAV_DASHBOARDS": "Painel Principal"
+    },
+    "MSG":{
+      "BEM_VINDO":"Bem vindo, "
     }
 }

@@ -4,12 +4,8 @@
             <span>P</span>
         </div>
         <div class="title" translate="LOGIN_V2.INTRO_TITLE">
-            Welcome to the FUSE!
         </div>
-        <div class="description" translate="LOGIN_V2.INTRO_DESCRIPTION">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ullamcorper nisl erat,
-            vel convallis elit fermentum pellentesque. Sed mollis velit facilisis facilisis viverra.
-        </div>
+        <div class="description" translate="LOGIN_V2.INTRO_DESCRIPTION"></div>
     </div>
 
     <div id="login-v2-form-wrapper" class="flex-scrollable md-whiteframe-8dp" ms-scroll>
@@ -68,7 +64,7 @@
                 <span class="text" translate="LOGIN_V2.OR">OR</span>
             </div>
 
-            <div layout="column" layout-align="start center">
+            <div layout="column" ng-click="vm.toggleSignInGoogle()"layout-align="start center">
                 <md-button class="md-raised google">
                     <div layout="row" layout-align="center center">
                         <span>
@@ -78,7 +74,7 @@
                     </div>
                 </md-button>
 
-                <md-button class="md-raised facebook">
+                <md-button ng-click="vm.toggleSignInFacebook()" class="md-raised facebook">
                     <div layout="row" layout-align="center center">
                         <span>
                             <md-icon md-font-icon="icon-facebook" class="s16"></md-icon>
