@@ -22,6 +22,7 @@
       'app.dashboards',
       'app.cadastros',
       'app.auth',
-      'scpeFront'
+      'scpeFront',
+      'firebase',
     ]);
 })();

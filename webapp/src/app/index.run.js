@@ -33,6 +33,8 @@
 
     if ($rootScope.$sessionStorage.user) {
       $rootScope.user = $rootScope.$sessionStorage.user;
+    } else {
+      $location.path('/auth/login');
     }
 
 

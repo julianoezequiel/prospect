@@ -18,7 +18,7 @@
                     controller : 'MainController as vm'
                 },
                 'content@app.pages_auth_register': {
-                    templateUrl: 'app/main/pages/auth/register/register.html',
+                    templateUrl: 'app/main/auth/register/register.html',
                     controller : 'RegisterController as vm'
                 }
             },
@@ -26,7 +26,7 @@
         });
 
         // Translation
-        $translatePartialLoaderProvider.addPart('app/main/pages/auth/register');
+        $translatePartialLoaderProvider.addPart('app/main/auth/register');
 
         // Navigation
         msNavigationServiceProvider.saveItem('pages.auth.register', {
