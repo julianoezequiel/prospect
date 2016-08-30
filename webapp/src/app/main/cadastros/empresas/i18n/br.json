@@ -23,6 +23,14 @@
   },
   "CAD_EMPRESA":{
     "RAZAO-SOCIAL":"Razão social",
-    "NOME-FANTASIA":"Nome fantasia"
+    "NOME-FANTASIA":"Nome fantasia",
+    "CIDADE":"Cidade",
+    "ESTADO":"Estado",
+    "TELEFONE":"Telefone",
+    "EMAIL":"E-Mail",
+    "PAIS":"País",
+    "ENDERECO":"Endereço",
+    "CEP":"Cep"
+
   }
 }

@@ -1,0 +1,42 @@
+{
+  "SIDE_BAR": {
+    "NAV_EMPRESA": "Empresa",
+    "NAV_DEPARTAMENTO": "Departamento",
+    "NAV_OPERADOR": "Operador",
+    "NAV_GRUPO_ACESSO": "Grupo de Acesso",
+    "NAV_CADASTROS": "Cadastros",
+    "NAV_ORCAMENTOS": "Orçamentos"
+  },
+  "CRUD": {
+    "EDITAR": "Editar",
+    "EXCLUIR": "Excluir",
+    "VOLTAR": "Voltar",
+    "RECARREGAR": "Recarregar",
+    "ADICIONAR":"Adicionar",
+    "CAMPO-OBRIGATORIO": "Campo obrigatório",
+    "BUSCAR": "Buscar",
+    "BUSCAR-EMPRESAS": "Buscar empresas",
+    "BUSCAR-ORCAMENTOS": "Buscar orçamentos",
+    "SELECIONADA":"selecionada",
+    "GRAVAR":"Gravar",
+    "VALOR-MAXIMO":"Valor informado é muito grande",
+    "VALOR-MINIMO":"Valor mínimo é obrigatório"
+  },
+  "BREADCRUMB": {
+    "CADASTROS": "Cadastros",
+    "EMPRESAS": "Empresas",
+    "ORCAMENTOS": "Orçamentos"
+  },
+  "CAD_EMPRESA":{
+    "RAZAO-SOCIAL":"Razão social",
+    "NOME-FANTASIA":"Nome fantasia"
+  },
+  "CAD_ORCAMENTO":{
+    "DESCRICAO":"Descrição",
+    "QUANTIDADE":"Quantidade",
+    "PRECO-MINIMO":"Preço Min.",
+    "PRECO-MAXIMO":"Preço Max.",
+    "PRAZO":"Prazo de entrega",
+    "CATEGORIA":"Categoria"
+  }
+}

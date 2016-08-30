@@ -1,0 +1,28 @@
+{
+  "SIDE_BAR": {
+    "NAV_EMPRESA": "Company",
+    "NAV_DEPARTAMENTO": "Department",
+    "NAV_OPERADOR": "Users",
+    "NAV_GRUPO_ACESSO": "Access Group",
+    "NAV_CADASTROS": "Register"
+  },
+  "CRUD": {
+    "EDITAR": "Edit",
+    "EXCLUIR": "Delete",
+    "VOLTAR": "Back",
+    "RECARREGAR": "Refresh",
+    "ADICIONAR":"Add",
+    "CAMPO-OBRIGATORIO": "Required field",
+    "BUSCAR": "Seach",
+    "BUSCAR-EMPRESAS": "Seach Company",
+    "SELECIONADA":"selecionada"
+  },
+  "BREADCRUMB": {
+    "CADASTROS": "Records",
+    "EMPRESAS": "Company"
+  },
+  "CAD_EMPRESA": {
+    "RAZAO-SOCIAL": "Company name",
+    "NOME-FANTASIA":"fantasy name"
+  }
+}
