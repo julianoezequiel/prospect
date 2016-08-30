@@ -3,7 +3,7 @@
     'use strict';
 
     angular
-        .module('app.cadastros', ['app.empresas','app.ui.icons'])
+        .module('app.cadastros', ['app.empresas','app.categorias','app.orcamentos','app.categorias.service','app.orcamentosPendentes','ui.utils.masks','app.ui.icons'])
         .config(config);
 
     /** @ngInject */
@@ -31,10 +31,17 @@
             weight   : 1
         });
 
-        msNavigationServiceProvider.saveItem('cadastro.orcamentos', {
+        msNavigationServiceProvider.saveItem('cadastro.orcamento', {
             title: 'Orçamentos',
-            state: 'app.cadastro_orcamentos',
+            state: 'app.orcamento',
             translate: 'SIDE_BAR.NAV_ORCAMENTOS',
+            icon:'icon-office'
+        });
+
+        msNavigationServiceProvider.saveItem('cadastro.categoria', {
+            title: 'Categorias',
+            state: 'app.categoria',
+            translate: 'SIDE_BAR.NAV_CATEGORIAS',
             icon:'icon-office'
         });
 

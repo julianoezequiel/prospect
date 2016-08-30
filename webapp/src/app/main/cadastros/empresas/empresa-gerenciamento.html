@@ -62,15 +62,23 @@
                   </div>
                 </md-input-container>
               </div>
+              <md-input-container class="md-block">
+                  <label>{{'CAD_EMPRESA.ENDERECO' | translate }}</label>
+                  <textarea ng-model="vm.empresa.endereco" columns="1" md-maxlength="150" rows="5"></textarea>
+                </md-input-container>
 
               <div layout="column" layout-gt-xs="row">
                 <md-input-container flex>
-                  <label>City</label>
-                  <input type="text" name="city" ng-model="vm.basicForm.city">
+                  <label>{{'CAD_EMPRESA.TELEFONE' | translate }}</label>
+                  <input name="telefone" ng-model="vm.empresa.telefone" required ng-pattern="/^[0-9]{5}$/" md-maxlength="5">
+                </md-input-container>
+                <md-input-container flex>
+                  <label>{{'CAD_EMPRESA.CIDADE' | translate }}</label>
+                  <input type="text" name="cidade" ng-model="vm.empresa.cidade">
                 </md-input-container>
 
                 <md-input-container flex>
-                  <label>State</label>
+                  <label>{{'CAD_EMPRESA.ESTADO' | translate }}</label>
                   <md-select ng-model="vm.basicForm.state">
                     <md-option ng-repeat="state in vm.states" value="{{state.abbrev}}">
                       {{state.abbrev}}
@@ -79,8 +87,8 @@
                 </md-input-container>
 
                 <md-input-container flex>
-                  <label>Postal Code</label>
-                  <input name="postalcode" ng-model="vm.basicForm.postalCode" placeholder="12345" required ng-pattern="/^[0-9]{5}$/" md-maxlength="5">
+                  <label>{{'CAD_EMPRESA.CEP' | translate }}</label>
+                  <input name="postalcode" ng-model="vm.basicForm.postalCode" required ng-pattern="/^[0-9]{5}$/" md-maxlength="5">
                   <div ng-messages="basicForm.postalcode.$error" role="alert" multiple>
                     <div ng-message="required"><span>You must supply a postal code.</span></div>
                     <div ng-message="pattern"><span>That doesn't look like a valid postal code.</span></div>
@@ -92,12 +100,12 @@
               </div>
 
               <md-input-container class="md-block">
-                <label>Biography</label>
+                <label>{{'CAD_EMPRESA.EMAIL' | translate }}</label>
                 <textarea ng-model="vm.basicForm.biography" columns="1" md-maxlength="150" rows="5"></textarea>
               </md-input-container>
 
               <md-button type="submit" class="md-raised md-accent" aria-label="Submit" ng-disabled="basicForm.$invalid || basicForm.$pristine">
-                Submit
+                {{'CRUD.GRAVAR' | translate }}
               </md-button>
             </form>
 

@@ -1,0 +1,72 @@
+<div id="categorias-listar" class="page-layout simple right-sidenav" layout="row">
+
+  <!-- CENTER -->
+  <div class="center" flex ms-scroll>
+
+    <!-- HEADER -->
+    <div class="header md-accent-bg" layout="row" layout-align="space-between">
+      <div layout="column" layout-align="space-between">
+        <div class="breadcrumb" layout="row" layout-align="start center">
+          <md-icon md-font-icon="icon-home" ng-click="state.go('app.dashboards_cliente')" class="s16 hom"></md-icon>
+          <md-icon md-font-icon="icon-chevron-right" class="s16 separator"></md-icon>
+          <span class="parent">{{vm.id_cadastros|translate}}</span>
+          <md-icon md-font-icon="icon-chevron-right" class="s16 separator"></md-icon>
+          <span class="parent">{{vm.id_categorias|translate}}</span>
+        </div>
+        <div class="title">{{vm.id_categorias|translate}}</div>
+      </div>
+    </div>
+    <!-- / HEADER -->
+    <!-- CONTENT -->
+    <div class="content" layout="column">
+
+      <md-card>
+        <md-toolbar class="md-table-toolbar md-default" ng-show="!vm.options.rowSelection || !vm.selected.length">
+          <div class="md-toolbar-tools">
+            <md-button class="md-icon-button" ng-click="state.go('app.categoria')">
+              <md-icon md-font-icon="icon-arrow-left-bold-circle"></md-icon>
+              <md-tooltip>
+                {{vm.id_voltar|translate}}
+              </md-tooltip>
+            </md-button>
+          </div>
+        </md-toolbar>
+
+        <div layout="row">
+
+          <!-- BASIC FORM -->
+          <div class="form-wrapper md-whiteframe-1dp" flex>
+
+            <form name="basicForm" class="md-inline-form" novalidate>
+
+
+              <div layout="column" layout-gt-xs="row" >
+                <md-input-container flex>
+                  <label>{{'CAD_CATEGORIA.DESCRICAO' | translate }}</label>
+                  <input type="text" name="descricao" ng-model="vm.categoria.descricao"  required>
+                  <div ng-messages="basicForm.descricao.$error" role="alert">
+                    <div ng-message="required">
+                      <span>{{'CRUD.CAMPO-OBRIGATORIO' | translate}}.</span>
+                    </div>
+                  </div>
+                </md-input-container>
+              </div>
+
+
+              <md-button type="submit" class="md-raised md-accent" aria-label="Submit" ng-disabled="basicForm.$invalid || basicForm.$pristine">
+                {{'CRUD.GRAVAR' | translate }}
+              </md-button>
+            </form>
+
+          </div>
+
+
+      </md-card>
+      <!-- </md-content> -->
+      </div>
+      <!-- / CONTENT -->
+
+
+    </div>
+  </div>
+</div>

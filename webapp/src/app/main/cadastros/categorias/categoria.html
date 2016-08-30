@@ -1,0 +1,105 @@
+<div id="categorias-listar" class="page-layout simple right-sidenav" layout="row">
+
+  <!-- CENTER -->
+  <div class="center" flex ms-scroll>
+
+    <!-- HEADER -->
+    <div class="header md-accent-bg" layout="row" layout-align="space-between">
+      <div layout="column" layout-align="space-between">
+        <div class="breadcrumb" layout="row" layout-align="start center">
+          <md-icon md-font-icon="icon-home" ng-click="state.go('app.dashboards_cliente')" class="s16 hom"></md-icon>
+          <md-icon md-font-icon="icon-chevron-right" class="s16 separator"></md-icon>
+          <span class="parent">{{vm.id_cadastros|translate}}</span>
+          <md-icon md-font-icon="icon-chevron-right" class="s16 separator"></md-icon>
+          <span class="parent">{{vm.id_categorias|translate}}</span>
+        </div>
+        <div class="title">{{vm.id_categorias|translate}}</div>
+      </div>
+    </div>
+    <!-- / HEADER -->
+    <!-- CONTENT -->
+    <div class="content" layout="column">
+
+      <!-- <md-card>
+        <div layout="row" layout-wrap class="checkboxes">
+          <md-checkbox ng-model="vm.options.rowSelection">Row Selection</md-checkbox>
+          <md-checkbox ng-model="vm.options.multiSelect">Multiple Selection</md-checkbox>
+          <md-checkbox ng-model="vm.options.autoSelect">Auto Selection</md-checkbox>
+          <md-checkbox ng-model="vm.options.decapitate">Decapitate</md-checkbox>
+          <md-checkbox ng-model="vm.options.largeEditDialog">Lard Edit Dialogs</md-checkbox>
+          <md-checkbox ng-model="vm.options.boundaryLinks">Pagination Boundary Links</md-checkbox>
+          <md-checkbox ng-model="vm.options.limitSelect" ng-click="vm.toggleLimitOptions()">Pagination Limit Select</md-checkbox>
+          <md-checkbox ng-model="vm.options.pageSelect">Pagination Page Select</md-checkbox>
+        </div>
+      </md-card> -->
+
+      <md-card>
+        <md-toolbar class="md-table-toolbar md-default" ng-show="!vm.options.rowSelection || !vm.selected.length">
+          <div class="md-toolbar-tools">
+            <span>{{vm.id_categorias|translate}}</span>
+            <span flex></span>
+            <md-input-container md-theme="input" flex ng-show="vm.showSearch">
+              <label>&nbsp;</label>
+              <input ng-model="vm.search" class="search" placeholder="{{vm.id_buscaCategoria|translate}}">
+            </md-input-container>
+            <md-button class="md-icon-button" ng-click="vm.showSearch = !vm.showSearch">
+              <md-icon md-font-icon="icon-magnify"></md-icon>
+              <md-tooltip>
+                {{vm.id_buscar|translate}}
+              </md-tooltip>
+            </md-button>
+            <md-button class="md-icon-button" ng-click="vm.loadStuff()">
+              <md-icon md-font-icon="icon-sync"></md-icon>
+              <md-tooltip>
+                {{vm.id_recarregar|translate}}
+              </md-tooltip>
+            </md-button>
+            <md-button class="md-icon-button" ng-click="state.go('app.categoria.add')">
+              <md-icon md-font-icon="icon-plus-circle"></md-icon>
+              <md-tooltip>
+                {{vm.id_adicionar|translate}}
+              </md-tooltip>
+            </md-button>
+          </div>
+        </md-toolbar>
+
+        <md-toolbar class="md-table-toolbar md-default" ng-show="vm.options.rowSelection && vm.selected.length">
+          <div class="md-toolbar-tools">
+            <!-- <span>{{vm.selected.length}} {{vm.id_empresas|translate}} {{vm.id_selecionada|translate}}</span> -->
+            <span flex></span>
+            <md-button class="md-icon-button">
+              <md-icon md-font-icon="icon-trash"></md-icon>
+              <md-tooltip>
+                {{vm.id_excluir|translate}}
+              </md-tooltip>
+            </md-button>
+          </div>
+        </md-toolbar>
+
+        <md-table-container>
+          <table md-table md-row-select="true" multiple="true" ng-model="vm.selected" md-progress="vm.promise">
+            <thead md-head md-order="vm.query.order" md-on-reorder="vm.logOrder">
+              <tr md-row>
+                <th md-column md-order-by="descricao"><span>{{vm.id_descricao|translate}}</span></th>
+              </tr>
+            </thead>
+            <tbody md-body>
+              <tr md-row md-select="categoria" md-on-select="vm.logItem" ng-repeat="categoria in vm.categorias | filter: vm.search | orderBy: vm.query.order | limitTo: vm.query.limit : (vm.query.page -1) * vm.query.limit">
+                <td md-cell style="cursor:pointer" data-ng-click="state.go('app.categoria.edt',{id:categorias.idCategoria})">{{categoria.descricao}}</td>
+
+              </tr>
+            </tbody>
+          </table>
+        </md-table-container>
+
+        <md-table-pagination md-limit="vm.query.limit" md-limit-options="vm.limitOptions" md-page="vm.query.page" md-total="{{vm.orcamentos.count}}" md-page-select="vm.options.pageSelect" md-boundary-links="vm.options.boundaryLinks" md-on-paginate="vm.logPagination"></md-table-pagination>
+      </md-card>
+      <!-- </md-content> -->
+    </div>
+    <!-- / CONTENT -->
+
+  </div>
+</div>
+<style>
+
+</style>

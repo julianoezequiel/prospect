@@ -7,10 +7,44 @@
         .controller('ToolbarController', ToolbarController);
 
     /** @ngInject */
-    function ToolbarController($rootScope, $mdSidenav, $translate, $mdToast)
+    function ToolbarController($rootScope, $mdSidenav, $translate, $mdToast, $interval)
     {
         var vm = this;
 
+        // Now widget
+        vm.nowWidget = {
+            now   : {
+                second: '',
+                minute: '',
+                hour  : '',
+                day   : '',
+                month : '',
+                year  : ''
+            },
+            ticker: function ()
+            {
+                var now = moment();
+                vm.nowWidget.now = {
+                    second : now.format('ss'),
+                    minute : now.format('mm'),
+                    hour   : now.format('HH'),
+                    day    : now.format('D'),
+                    weekDay: TaduzirDiaSemana(now.format('d')),
+                    month  : now.format('MM'),
+                    year   : now.format('YYYY')
+                };
+            }
+        };
+
+        // Now widget ticker
+        vm.nowWidget.ticker();
+
+        var nowWidgetTicker = $interval(vm.nowWidget.ticker, 1000);
+
+        //$scope.$on('$destroy', function ()
+        //{
+        //    $interval.cancel(nowWidgetTicker);
+        //});
         // Data
         $rootScope.global = {
             search: ''
@@ -154,6 +188,37 @@
             $translate.use(lang.code);
         }
 
+        function TaduzirDiaSemana(dayWeek)
+        {
+            if (dayWeek == 1)
+            {
+              return "Segunda-Feira";
+            }
+            else if  (dayWeek == 2)
+            {
+              return "Terça-Feira";
+            }
+            else if  (dayWeek == 3)
+            {
+              return "Quarta-Feira";
+            }
+            else if  (dayWeek == 4)
+            {
+              return "Quinta-Feira";
+            }
+            else if  (dayWeek == 5)
+            {
+              return "Sexta-Feira";
+            }
+            else if  (dayWeek == 6)
+            {
+              return "Sábado";
+            }
+            else if  (dayWeek == 0)
+            {
+              return "Domingo";
+            }
+        }
         /**
          * Toggle horizontal mobile menu
          */

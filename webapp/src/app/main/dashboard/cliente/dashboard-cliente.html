@@ -1,0 +1,107 @@
+<div id="dashboard-project" class="page-layout simple right-sidenav" layout="row">
+
+    <!-- CENTER -->
+    <div class="center" flex ms-scroll>
+
+        <!-- CONTENT -->
+        <div class="content">
+          <!-- SIDENAV -->
+          <!-- / SIDENAV -->
+            <md-tabs md-dynamic-height>
+
+                <md-tab label="Orçamentos pendentes">
+
+                    <!-- WIDGET GROUP -->
+                    <div class="widget-group" layout="row" flex="100" layout-wrap>
+
+                        <!-- WIDGET 7 -->
+                        <ms-widget layout="column" flex="100">
+
+                            <!-- Front -->
+                            <ms-widget-front class="white-bg">
+
+                                <div style="cursor:pointer" class="p-16" layout="row" layout-align="space-between center"
+                                     ng-repeat="orcamento in vm.orcamentosPendentes.schedule[vm.orcamentosPendentes.currentRange]" data-ng-click="state.go('app.orcamentosPendentes')">
+                                    <div>
+                                        <span ng-if="orcamento.categoria">{{orcamento.categoria}}</span>
+                                        <div class="h3">{{orcamento.descricao}} - ({{orcamento.precoMinimo | currency}} - {{orcamento.precoMaximo | currency}} )</div>
+                                        <div>
+                                            <span class="secondary-text">{{orcamento.data}}</span>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <span class="h3">1234</span>
+                                    </div>
+                                    <!--<md-button type="submit" class="md-secondary" aria-label="Submit"  data-ng-click="state.go('app.orcamentosPendentes')">1234</md-button>-->
+                                </div>
+
+                            </ms-widget-front>
+                            <!-- / Front -->
+
+                        </ms-widget>
+                        <!-- / WIDGET 7 -->
+
+                    </div>
+                    <!-- / WIDGET GROUP -->
+
+                </md-tab>
+
+                <md-tab label="Orçamentos Aceitos">
+
+                    <!-- WIDGET GROUP -->
+                    <div class="widget-group" layout="row" flex="100" layout-wrap></div>
+                    <!-- / WIDGET GROUP -->
+
+                    <!-- WIDGET GROUP -->
+                    <div class="widget-group" layout="row" flex="100" layout-wrap>
+
+                        <!-- WIDGET 10 -->
+                        <ms-widget layout="row" flex="100">
+
+                            <!-- Front -->
+                            <ms-widget-front class="white-bg">
+
+                                <div class="simple-table-container" ms-responsive-table>
+                                    <table class="simple">
+                                        <thead>
+                                            <tr>
+                                                <th ng-repeat="column in vm.widget10.table.columns">
+                                                    {{column.title}}
+                                                </th>
+                                            </tr>
+                                        </thead>
+
+                                        <tbody>
+                                            <tr ng-repeat="row in vm.widget10.table.rows">
+                                                <td ng-repeat="cell in row">
+                                                    <span class="{{cell.classes}}">
+                                                        {{cell.value}}
+                                                    </span>
+                                                    <i ng-if="cell.icon" class="icon {{cell.icon}}"></i>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                            </ms-widget-front>
+                            <!-- / Front -->
+
+                        </ms-widget>
+                        <!-- / WIDGET 10 -->
+
+                    </div>
+                    <!-- / WIDGET GROUP -->
+
+                </md-tab>
+            </md-tabs>
+
+        </div>
+        <!-- / CONTENT -->
+
+    </div>
+    <!-- / CENTER -->
+
+
+
+</div>

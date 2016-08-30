@@ -1,0 +1,140 @@
+<div id="orcamentos-listar" class="page-layout simple right-sidenav" layout="row">
+
+  <!-- CENTER -->
+  <div class="center" flex ms-scroll>
+
+    <!-- HEADER -->
+    <div class="header md-accent-bg" layout="row" layout-align="space-between">
+      <div layout="column" layout-align="space-between">
+        <div class="breadcrumb" layout="row" layout-align="start center">
+          <md-icon md-font-icon="icon-home" ng-click="state.go('app.dashboards_cliente')" class="s16 hom"></md-icon>
+          <md-icon md-font-icon="icon-chevron-right" class="s16 separator"></md-icon>
+          <span class="parent">{{vm.id_cadastros|translate}}</span>
+          <md-icon md-font-icon="icon-chevron-right" class="s16 separator"></md-icon>
+          <span class="parent">{{vm.id_orcamentos|translate}}</span>
+        </div>
+        <div class="title">{{vm.id_orcamentos|translate}}</div>
+      </div>
+    </div>
+    <!-- / HEADER -->
+    <!-- CONTENT -->
+    <div class="content" layout="column">
+
+      <md-card>
+        <md-toolbar class="md-table-toolbar md-default" ng-show="!vm.options.rowSelection || !vm.selected.length">
+          <div class="md-toolbar-tools">
+            <md-button class="md-icon-button" ng-click="state.go('app.orcamento')">
+              <md-icon md-font-icon="icon-arrow-left-bold-circle"></md-icon>
+              <md-tooltip>
+                {{vm.id_voltar|translate}}
+              </md-tooltip>
+            </md-button>
+          </div>
+        </md-toolbar>
+
+        <div layout="row">
+
+          <!-- BASIC FORM -->
+          <div class="form-wrapper md-whiteframe-1dp" flex>
+
+            <form name="basicForm" class="md-inline-form" novalidate>
+
+              <!-- <div class="form-title">Optional form title</div> -->
+              <div layout="column" layout-gt-xs="row">
+                <md-input-container flex>
+                  <label>{{'CAD_ORCAMENTO.CATEGORIA' | translate }}</label>
+                  <md-select ng-model="vm.categoria" required>
+                   <md-option ng-value="categoria" ng-repeat="categoria in vm.categorias">{{ categoria.descricao }}</md-option>
+                  </md-select>
+                  <div ng-messages="basicForm.categoria.$error" role="alert">
+                    <div ng-message="required">
+                      <span>{{'CRUD.CAMPO-OBRIGATORIO' | translate}}.</span>
+                    </div>
+                  </div>
+                </md-input-container>
+              </div>
+              <div layout="column" layout-gt-xs="row" >
+                <md-input-container flex>
+                  <label>{{'CAD_ORCAMENTO.DESCRICAO' | translate }}</label>
+                  <input type="text" name="descricao" ng-model="vm.descricao"  required>
+
+                  <div ng-messages="basicForm.descricao.$error" role="alert">
+                    <div ng-message="required">
+                      <span>{{'CRUD.CAMPO-OBRIGATORIO' | translate}}.</span>
+                    </div>
+                  </div>
+                </md-input-container>
+              </div>
+
+              <div layout="column" layout-gt-xs="row">
+                <md-input-container>
+                  <label>{{'CAD_ORCAMENTO.QUANTIDADE' | translate }}</label>
+                  <input  type="number" step="any" name="quantidade" ng-model="vm.quantidade" min="1" max="999999"  required/>
+                  <div ng-messages="basicForm.quantidade.$error" role="alert">
+                    <div ng-message="required">
+                      <span>{{'CRUD.CAMPO-OBRIGATORIO' | translate}}.</span>
+                    </div>
+                    <div ng-message="min">
+                      <span>{{'CRUD.VALOR-MINIMO' | translate}}.</span>
+                    </div>
+                    <div ng-message="max">
+                      <span>{{'CRUD.VALOR-GRANDE' | translate}}.</span>
+                    </div>
+                  </div>
+                </md-input-container>
+                <md-input-container>
+                  <label>{{'CAD_ORCAMENTO.PRECO-MINIMO' | translate }}</label>
+                  <input type="text" step="any" name="precoMin" ng-model="vm.precoMin" ui-money-mask = "2" min="0.01" max="9999999999999" required/>
+
+                  <div ng-messages="basicForm.precoMin.$error" role="alert">
+                    <div ng-message="required">
+                      <span>{{'CRUD.CAMPO-OBRIGATORIO' | translate}}.</span>
+                    </div>
+                    <div ng-message="min">
+                      <span>{{'CRUD.VALOR-MINIMO' | translate}}.</span>
+                    </div>
+                    <div ng-message="max">
+                      <span>{{'CRUD.VALOR-MAXIMO' | translate}}.</span>
+                    </div>
+                  </div>
+                </md-input-container>
+                <md-input-container>
+                  <label>{{'CAD_ORCAMENTO.PRECO-MAXIMO' | translate }}</label>
+                  <input type="text" step="any" name="precoMax" ng-model="vm.precoMax" ui-money-mask = "2" min="0.01" max="9999999999999" required/>
+
+                  <div ng-messages="basicForm.precoMax.$error" role="alert">
+                    <div ng-message="required">
+                      <span>{{'CRUD.CAMPO-OBRIGATORIO' | translate}}.</span>
+                    </div>
+                    <div ng-message="min">
+                      <span>{{'CRUD.VALOR-MINIMO' | translate}}.</span>
+                    </div>
+                    <div ng-message="max">
+                      <span>{{'CRUD.VALOR-MAXIMO' | translate}}.</span>
+                    </div>
+                  </div>
+                </md-input-container>
+                <md-datepicker ng-model="vm.prazo" md-placeholder="Prazo de entrega" required></md-datepicker>
+                <div ng-messages="basicForm.prazo.$error" role="alert">
+                  <div ng-message="required">
+                    <span>{{'CRUD.CAMPO-OBRIGATORIO' | translate}}.</span>
+                  </div>
+                </div>
+              </div>
+              <md-button type="button" ng-click="vm.showAlert(vm.basicForm)" class="md-raised md-accent" aria-label="Submit" ng-disabled="basicForm.$invalid || basicForm.$pristine">
+                {{'CRUD.GRAVAR' | translate }}
+              </md-button>
+            </form>
+
+          </div>
+
+
+      </md-card>
+      <!-- </md-content> -->
+      </div>
+      <!-- / CONTENT -->
+
+
+    </div>
+  </div>
+</div>

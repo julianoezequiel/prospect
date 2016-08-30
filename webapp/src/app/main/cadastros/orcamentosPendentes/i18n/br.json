@@ -1,0 +1,58 @@
+{
+  "SIDE_BAR": {
+    "NAV_EMPRESA": "Empresa",
+    "NAV_DEPARTAMENTO": "Departamento",
+    "NAV_OPERADOR": "Operador",
+    "NAV_GRUPO_ACESSO": "Grupo de Acesso",
+    "NAV_CADASTROS": "Cadastros",
+    "NAV_ORCAMENTOS": "Orçamentos",
+    "NAV_CATEGORIAS": "Categorias",
+    "NAV_ORCAMENTOS_PENDENTES": "Orçamentos Pendentes"
+  },
+  "CRUD": {
+    "EDITAR": "Editar",
+    "EXCLUIR": "Excluir",
+    "VOLTAR": "Voltar",
+    "RECARREGAR": "Recarregar",
+    "ADICIONAR":"Adicionar",
+    "CAMPO-OBRIGATORIO": "Campo obrigatório",
+    "BUSCAR": "Buscar",
+    "BUSCAR-EMPRESAS": "Buscar empresas",
+    "BUSCAR-ORCAMENTOS": "Buscar orçamentos",
+    "BUSCAR-CATEGORIAS": "Buscar Categorias",
+    "SELECIONADA":"selecionada",
+    "GRAVAR":"Gravar",
+    "OPTION-NENHUM":"Nenhum",
+    "CONFIRMAR_ORCAMENTO" :"Confirmar"
+  },
+  "BREADCRUMB": {
+    "CADASTROS": "Cadastros",
+    "EMPRESAS": "Empresas",
+    "ORCAMENTOS": "Orçamentos",
+    "CATEGORIAS": "Categorias",
+    "ORCAMENTOSPENDENTES": "Orçamentos Pendentes",
+    "CONSULTAS": "Consultas"
+  },
+  "CAD_EMPRESA":{
+    "RAZAO-SOCIAL":"Razão social",
+    "NOME-FANTASIA":"Nome fantasia"
+  },
+  "CAD_ORCAMENTO":{
+    "DESCRICAO":"Descrição",
+    "QUANTIDADE":"Quantidade",
+    "PRECO-MINIMO":"Preço Min.",
+    "PRECO-MAXIMO":"Preço Max.",
+    "PRAZO":"Prazo de entrega",
+    "CATEGORIA":"Categoria"
+  },
+  "CAD_CATEGORIA":{
+    "DESCRICAO":"Descrição"
+  },
+  "CAD_ORCAMENTOSPENDENTES":{
+    "PRECO-MINIMO":"Preço Mínimo",
+    "PRECO-MAXIMO":"Preço Máximo",
+    "EMPRESA":"Empresa",
+    "VALOR":"Valor",
+    "PRAZO":"Prazo de entrega"
+  }
+}

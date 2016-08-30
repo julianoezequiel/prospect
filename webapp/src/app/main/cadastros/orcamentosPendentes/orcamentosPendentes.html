@@ -1,0 +1,122 @@
+<div id="orcamentosPendentes-listar" class="page-layout simple right-sidenav" layout="row">
+
+  <!-- CENTER -->
+  <div class="center" flex ms-scroll>
+
+    <!-- HEADER -->
+    <div class="header md-accent-bg" layout="row" layout-align="space-between">
+      <div layout="column" layout-align="space-between">
+        <div class="breadcrumb" layout="row" layout-align="start center">
+          <md-icon md-font-icon="icon-home" ng-click="state.go('app.dashboards_cliente')" class="s16 hom"></md-icon>
+          <md-icon md-font-icon="icon-chevron-right" class="s16 separator"></md-icon>
+          <span class="parent">{{vm.id_consulta|translate}}</span>
+          <md-icon md-font-icon="icon-chevron-right" class="s16 separator"></md-icon>
+          <span class="parent">{{vm.id_orcamentosPendentes|translate}}</span>
+        </div>
+        <div class="title">{{vm.id_orcamentosPendentes|translate}}</div>
+      </div>
+    </div>
+    <!-- / HEADER -->
+    <!-- CONTENT -->
+    <div class="content" layout="column">
+      <md-card>
+        <md-toolbar class="md-table-toolbar md-default" ng-show="!vm.options.rowSelection || !vm.selected.length">
+          <div class="md-toolbar-tools">
+            <md-button class="md-icon-button" ng-click="state.go('app.dashboards_cliente')">
+              <md-icon md-font-icon="icon-arrow-left-bold-circle"></md-icon>
+              <md-tooltip>
+                {{vm.id_voltar|translate}}
+              </md-tooltip>
+            </md-button>
+          </div>
+        </md-toolbar>
+        <md-toolbar class="md-table-toolbar md-default" ng-show="vm.options.rowSelection && vm.selected.length">
+          <div class="md-toolbar-tools">
+            <!-- <span>{{vm.selected.length}} {{vm.id_empresas|translate}} {{vm.id_selecionada|translate}}</span> -->
+            <span flex></span>
+            <md-button class="md-icon-button">
+              <md-icon md-font-icon="icon-trash"></md-icon>
+              <md-tooltip>
+                {{vm.id_excluir|translate}}
+              </md-tooltip>
+            </md-button>
+          </div>
+        </md-toolbar>
+
+        <md-table-container>
+          <!-- WIDGET GROUP -->
+          <div class="widget-group" layout="row" flex="100" layout-wrap>
+
+              <!-- WIDGET 10 -->
+              <ms-widget layout="row" flex="100">
+
+                  <!-- Front -->
+                  <ms-widget-front class="white-bg">
+
+                      <div class="simple-table-container" ms-responsive-table>
+                          <div class=" table-title">
+                              {{vm.Produto}}
+                          </div>
+                          <table class="simple">
+                              <thead>
+                                  <tr>
+                                      <th>
+                                          {{'CAD_ORCAMENTOSPENDENTES.EMPRESA' | translate}}
+                                      </th>
+                                      <th>
+                                          {{'CAD_ORCAMENTOSPENDENTES.VALOR' | translate}}
+                                      </th>
+                                      <th>
+                                          {{'CAD_ORCAMENTOSPENDENTES.PRAZO' | translate}}
+                                      </th>
+                                  </tr>
+                              </thead>
+
+                              <tbody>
+                                  <tr ng-repeat="orcamentosPendentes in vm.orcamentosPendentes">
+                                      <td>
+                                          <span >
+                                              {{orcamentosPendentes.Empresa}}
+                                          </span>
+                                      </td>
+                                      <td>
+                                          <span >
+                                              {{orcamentosPendentes.Valor}}
+                                          </span>
+                                      </td>
+                                      <td>
+                                          <span >
+                                              {{orcamentosPendentes.Prazo}}
+                                          </span>
+                                      </td>
+                                      <td>
+                                        <md-button type="button" ng-click="vm.showConfirm(vm.basicForm)" class="md-raised md-accent" aria-label="Submit">
+                                          {{'CRUD.CONFIRMAR_ORCAMENTO' | translate }}
+                                        </md-button>
+                                      </td>
+
+                                  </tr>
+                              </tbody>
+                          </table>
+                      </div>
+
+                  </ms-widget-front>
+                  <!-- / Front -->
+
+              </ms-widget>
+              <!-- / WIDGET 10 -->
+
+          </div>
+        </md-table-container>
+
+        <md-table-pagination md-limit="vm.query.limit" md-limit-options="vm.limitOptions" md-page="vm.query.page" md-total="{{vm.orcamentos.count}}" md-page-select="vm.options.pageSelect" md-boundary-links="vm.options.boundaryLinks" md-on-paginate="vm.logPagination"></md-table-pagination>
+      </md-card>
+      <!-- </md-content> -->
+    </div>
+    <!-- / CONTENT -->
+
+  </div>
+</div>
+<style>
+
+</style>

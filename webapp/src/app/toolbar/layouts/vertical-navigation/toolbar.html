@@ -14,7 +14,19 @@
                               md-mode="indeterminate" md-diameter="64">
         </md-progress-circular>
     </div>
-
+    <!-- NOW WIDGET -->
+    <ms-widget flippable="false" class="sidenav-widget">
+        <!-- Front -->
+        <ms-widget-front>
+            <div class="pl-16 pr-8 pv-16" layout="row" layout-align="space-between center">
+                <div class="h3">
+                  {{vm.nowWidget.now.weekDay}} - {{vm.nowWidget.now.day}}/{{vm.nowWidget.now.month}}/{{vm.nowWidget.now.year}}
+                  {{vm.nowWidget.now.hour}}:{{vm.nowWidget.now.minute}}:{{vm.nowWidget.now.second}}
+                </div>
+            </div>
+        </ms-widget-front>
+        <!-- / Front -->
+    </ms-widget>
     <div layout="row" layout-align="start center">
         <md-menu-bar id="user-menu">
             <md-menu md-position-mode="left bottom">

@@ -1,79 +1,9 @@
 {
     "projects": [
         {
-            "name": "T H E M E L O C K . C O M"
-        },
-        {
-            "name": "T H E M E L O C K . C O M"
-        },
-        {
-            "name": "Creapond"
-        },
-        {
-            "name": "Withinpixels"
+            "name": "Teste"
         }
     ],
-    "widget1": {
-        "ranges": {
-            "DY": "Yesterday",
-            "DT": "Today",
-            "DTM": "Tomorrow"
-        },
-        "currentRange": "DT",
-        "data": {
-            "label": "DUE TASKS",
-            "count": {
-                "DY": 21,
-                "DT": 25,
-                "DTM": 19
-            },
-            "extra": {
-                "label": "Completed",
-                "count": {
-                    "DY": 6,
-                    "DT": 7,
-                    "DTM": "-"
-                }
-            }
-        },
-        "detail": "You can show some detailed information about this widget in here."
-    },
-    "widget2": {
-        "title": "Overdue",
-        "data": {
-            "label": "TASKS",
-            "count": 4,
-            "extra": {
-                "label": "Yesterday's overdue",
-                "count": 2
-            }
-        },
-        "detail": "You can show some detailed information about this widget in here."
-    },
-    "widget3": {
-        "title": "Issues",
-        "data": {
-            "label": "OPEN",
-            "count": 32,
-            "extra": {
-                "label": "Closed today",
-                "count": 0
-            }
-        },
-        "detail": "You can show some detailed information about this widget in here."
-    },
-    "widget4": {
-        "title": "Features",
-        "data": {
-            "label": "PROPOSALS",
-            "count": 42,
-            "extra": {
-                "label": "Implemented",
-                "count": 8
-            }
-        },
-        "detail": "You can show some detailed information about this widget in here."
-    },
     "widget5": {
         "title": "Github Issues",
         "ranges": {
@@ -448,72 +378,30 @@
             }
         }
     },
-    "widget7": {
-        "title": "Schedule",
-        "ranges": {
-            "T": "Today",
-            "TM": "Tomorrow"
-        },
+    "orcamentosPendentes": {
+        "title": "OrçamentosPendentes",
         "schedule": {
             "T": [
                 {
-                    "title": "Group Meeting",
-                    "time": "In 32 minutes",
-                    "location": "Room 1B"
+                    "categoria":"Eletrônico",
+                    "descricao": "TV FULL HD 4K",
+                    "precoMinimo": "20.02",
+                    "precoMaximo": "20.02",
+                    "data": "In 32 minutes"
                 },
                 {
-                    "title": "Coffee Break",
-                    "time": "10:30 AM"
+                    "categoria":"Eletrônico",
+                    "descricao": "SAMSUNG GALAXY S6",
+                    "precoMinimo": "20.02",
+                    "precoMaximo": "20.02",
+                    "data": "10:30 AM"
                 },
                 {
-                    "title": "Public Beta Release",
-                    "time": "11:00 AM"
-                },
-                {
-                    "title": "Lunch",
-                    "time": "12:10 PM"
-                },
-                {
-                    "title": "Dinner with David",
-                    "time": "17:30 PM"
-                },
-                {
-                    "title": "Jane's Birthday Party",
-                    "time": "19:30 PM"
-                },
-                {
-                    "title": "Overseer's Retirement Party",
-                    "time": "21:30 PM"
-                }
-            ],
-            "TM": [
-                {
-                    "title": "Marketing Meeting",
-                    "time": "09:00 AM"
-                },
-                {
-                    "title": "Public Announcement",
-                    "time": "11:00 AM"
-                },
-                {
-                    "title": "Lunch",
-                    "time": "12:10 PM"
-                },
-                {
-                    "title": "Meeting with Beta Testers",
-                    "time": "15:00 AM"
-                },
-                {
-                    "title": "Live Stream",
-                    "time": "17:30 PM"
-                },
-                {
-                    "title": "Release Party",
-                    "time": "19:30 PM"
-                },
-                {
-                    "title": "CEO's Party",
-                    "time": "22:30 PM"
+                    "categoria":"Serviços",
+                    "descricao": "PINTOR DE CASA",
+                    "precoMinimo": "20.02",
+                    "precoMaximo": "20.02",
+                    "data": "11:00 AM"
                 }
             ]
         }
@@ -684,65 +572,44 @@
         "table": {
             "columns": [
                 {
-                    "title": "Budget Type"
+                    "title": "Descrição"
                 },
                 {
-                    "title": "Total Budget"
+                    "title": "Preço ($)"
                 },
                 {
-                    "title": "Spent ($)"
+                    "title": "Empresa"
                 },
                 {
-                    "title": "Spent (%)"
-                },
-                {
-                    "title": "Remaining ($)"
-                },
-                {
-                    "title": "Remaining (%)"
+                    "title": "Data e Hora"
                 }
             ],
             "rows": [
                 [
                     {
-                        "value": "Wireframing",
-                        "classes": "text-boxed m-0 deep-orange-bg white-fg",
-                        "icon": ""
-                    },
-                    {
-                        "value": "$14,880.00",
+                        "value": "TV FULL HD",
                         "classes": "text-bold",
                         "icon": ""
                     },
                     {
-                        "value": "$14,000.00",
+                        "value": "$14,880.00",
                         "classes": "",
                         "icon": ""
                     },
                     {
-                        "value": "%94.08",
-                        "classes": "red-fg",
-                        "icon": "icon icon-trending-up s14 red-fg"
-                    },
-                    {
-                        "value": "$880.00",
+                        "value": "MAGAZINE LUIZA LTDA",
                         "classes": "",
                         "icon": ""
                     },
                     {
-                        "value": "%5.92",
+                        "value": "20/08/2016 17:34",
                         "classes": "",
-                        "icon": ""
+                        "icon": "icon icon-date"
                     }
                 ],
                 [
                     {
-                        "value": "Design",
-                        "classes": "text-boxed m-0 purple-bg white-fg",
-                        "icon": ""
-                    },
-                    {
-                        "value": "$21,080.00",
+                        "value": "CELULAR IPHONE S5",
                         "classes": "text-bold",
                         "icon": ""
                     },
@@ -752,115 +619,14 @@
                         "icon": ""
                     },
                     {
-                        "value": "%81.78",
-                        "classes": "red-fg",
-                        "icon": "icon icon-trending-up s14 red-fg"
-                    },
-                    {
-                        "value": "$3,839.66",
+                        "value": "CASAS BAHIA",
                         "classes": "",
                         "icon": ""
                     },
                     {
-                        "value": "%18.22",
+                        "value": "19/06/2016 20:30",
                         "classes": "",
-                        "icon": ""
-                    }
-                ],
-                [
-                    {
-                        "value": "Coding",
-                        "classes": "text-boxed m-0 light-blue-bg white-fg",
-                        "icon": ""
-                    },
-                    {
-                        "value": "$34,720.00",
-                        "classes": "text-bold",
-                        "icon": ""
-                    },
-                    {
-                        "value": "$3,518.00",
-                        "classes": "",
-                        "icon": ""
-                    },
-                    {
-                        "value": "%10.13",
-                        "classes": "green-fg",
-                        "icon": "icon icon-trending-down s14 green-fg"
-                    },
-                    {
-                        "value": "$31,202.00",
-                        "classes": "",
-                        "icon": ""
-                    },
-                    {
-                        "value": "%89.87",
-                        "classes": "",
-                        "icon": ""
-                    }
-                ],
-                [
-                    {
-                        "value": "Marketing",
-                        "classes": "text-boxed m-0 pink-bg white-fg",
-                        "icon": ""
-                    },
-                    {
-                        "value": "$34,720.00",
-                        "classes": "text-bold",
-                        "icon": ""
-                    },
-                    {
-                        "value": "$0.00",
-                        "classes": "",
-                        "icon": ""
-                    },
-                    {
-                        "value": "%0.00",
-                        "classes": "green-fg",
-                        "icon": "icon icon-minus s14 green-fg"
-                    },
-                    {
-                        "value": "$34,720.00",
-                        "classes": "",
-                        "icon": ""
-                    },
-                    {
-                        "value": "%100.00",
-                        "classes": "",
-                        "icon": ""
-                    }
-                ],
-                [
-                    {
-                        "value": "Extra",
-                        "classes": "text-boxed m-0 amber-bg white-fg",
-                        "icon": ""
-                    },
-                    {
-                        "value": "$18,600.00",
-                        "classes": "text-bold",
-                        "icon": ""
-                    },
-                    {
-                        "value": "$0.00",
-                        "classes": "",
-                        "icon": ""
-                    },
-                    {
-                        "value": "%0.00",
-                        "classes": "green-fg",
-                        "icon": "icon icon-minus s14 green-fg"
-                    },
-                    {
-                        "value": "$34,720.00",
-                        "classes": "",
-                        "icon": ""
-                    },
-                    {
-                        "value": "%100.00",
-                        "classes": "",
-                        "icon": ""
+                        "icon": "icon icon-date"
                     }
                 ]
             ]
