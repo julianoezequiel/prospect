@@ -1,84 +1,3 @@
-<<<<<<< HEAD
-(function() {
-  'use strict';
-
-  angular
-    .module('app.toolbar')
-    .controller('ToolbarController', ToolbarController);
-
-  /** @ngInject */
-  function ToolbarController($rootScope, $mdSidenav, $translate, $mdToast) {
-    var vm = this;
-
-    // Data
-    $rootScope.global = {
-      search: ''
-    };
-
-    vm.bodyEl = angular.element('body');
-    vm.userStatusOptions = [{
-      'title': 'Online',
-      'icon': 'icon-checkbox-marked-circle',
-      'color': '#4CAF50'
-    }, {
-      'title': 'Away',
-      'icon': 'icon-clock',
-      'color': '#FFC107'
-    }, {
-      'title': 'Do not Disturb',
-      'icon': 'icon-minus-circle',
-      'color': '#F44336'
-    }, {
-      'title': 'Invisible',
-      'icon': 'icon-checkbox-blank-circle-outline',
-      'color': '#BDBDBD'
-    }, {
-      'title': 'Offline',
-      'icon': 'icon-checkbox-blank-circle-outline',
-      'color': '#616161'
-    }];
-    vm.languages = {
-      br: {
-        'title': 'Português',
-        'translation': 'TOOLBAR.BRASIL',
-        'code': 'br',
-        'flag': 'br'
-      },
-      en: {
-        'title': 'English',
-        'translation': 'TOOLBAR.ENGLISH',
-        'code': 'en',
-        'flag': 'us'
-      },
-      es: {
-        'title': 'Spanish',
-        'translation': 'TOOLBAR.SPANISH',
-        'code': 'es',
-        'flag': 'es'
-      }
-    };
-
-    // Methods
-    vm.toggleSidenav = toggleSidenav;
-    vm.logout = logout;
-    vm.changeLanguage = changeLanguage;
-    vm.setUserStatus = setUserStatus;
-    vm.toggleHorizontalMobileMenu = toggleHorizontalMobileMenu;
-
-    //////////
-
-    init();
-
-    /**
-     * Initialize
-     */
-    function init() {
-      // Select the first status as a default
-      vm.userStatus = vm.userStatusOptions[0];
-
-      // Get the selected language directly from angular-translate module setting
-      vm.selectedLanguage = vm.languages[$translate.preferredLanguage()];
-=======
 (function ()
 {
     'use strict';
@@ -307,7 +226,6 @@
         {
             vm.bodyEl.toggleClass('ms-navigation-horizontal-mobile-menu-active');
         }
->>>>>>> 6a3202c1e53ed93cdeab5f632a80e652d37cb98c
     }
 
 
@@ -387,5 +305,4 @@
       vm.bodyEl.toggleClass('ms-navigation-horizontal-mobile-menu-active');
     }
   }
-
-})();
+)();
