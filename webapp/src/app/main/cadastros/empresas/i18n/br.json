@@ -24,6 +24,7 @@
   "CAD_EMPRESA":{
     "RAZAO-SOCIAL":"Razão social",
     "NOME-FANTASIA":"Nome fantasia",
+    "CNPJCPF":"CNPJ/CPF",
     "CIDADE":"Cidade",
     "ESTADO":"Estado",
     "TELEFONE":"Telefone",

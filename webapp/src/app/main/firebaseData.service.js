@@ -12,10 +12,15 @@
       root: root,
       users: root.child('users'),
       emails: root.child('emails'),
-      textMessages: root.child('textMessages')
+      textMessages: root.child('textMessages'),
+      empresas: root.child('empresas')
     };
 
     return service;
+
+    var salvar = function(objeto) {
+      return root.child('empresas').update(objeto);
+    }
   }
 
 })();

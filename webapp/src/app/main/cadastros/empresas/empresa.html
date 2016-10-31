@@ -91,13 +91,13 @@
             </thead>
             <tbody md-body>
               <tr md-row md-select="empresa" md-on-select="vm.logItem" ng-repeat="empresa in vm.empresas | filter: vm.search | orderBy: vm.query.order | limitTo: vm.query.limit : (vm.query.page -1) * vm.query.limit">
-                <td md-cell style="cursor:pointer" data-ng-click="state.go('app.empresa.edt',{id:empresa.idEmpresa})">{{empresa.rasaoSocial}}</td>
+                <td md-cell style="cursor:pointer" data-ng-click="state.go('app.empresa.edt',{id:empresa.idEmpresa})">{{empresa.razaoSocial}}</td>
                 <!-- <td md-cell>
                 <md-select ng-model="dessert.type" placeholder="Other">
                   <md-option ng-value="type" ng-repeat="type in vm.getTypes()">{{type}}</md-option>
                 </md-select>
               </td> -->
-                <td md-cell style="cursor:pointer" data-ng-click="state.go('app.empresa.edt',{id:empresa.idEmpresa})">{{empresa.documento}}</td>
+                <td md-cell style="cursor:pointer" data-ng-click="state.go('app.empresa.edt',{id:empresa.idEmpresa})">{{empresa.cnpjcpf}}</td>
                 <!-- <td md-cell ng-click="vm.editComment($event, dessert)" ng-class="{'md-placeholder': !dessert.comment}">
                 {{dessert.comment || 'Add a comment'}}
               </td> -->

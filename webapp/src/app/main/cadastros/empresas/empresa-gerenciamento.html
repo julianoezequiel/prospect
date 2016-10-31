@@ -37,7 +37,7 @@
           <!-- BASIC FORM -->
           <div class="form-wrapper md-whiteframe-1dp" flex>
 
-            <form name="basicForm" class="md-inline-form" novalidate>
+            <form name="basicForm" class="md-inline-form" novalidate ng-submit="vm.gravarempresa(vm.empresa)">
 
               <!-- <div class="form-title">Optional form title</div> -->
 
@@ -62,6 +62,15 @@
                   </div>
                 </md-input-container>
               </div>
+              <md-input-container flex class="md-block">
+                <label>{{'CAD_EMPRESA.CNPJCPF' | translate }}</label>
+                <input type="text" name="cnpjcpf" ng-model="vm.empresa.cnpjcpf" required>
+                <div ng-messages="basicForm.cnpjcpf.$error" role="alert">
+                  <div ng-message="required">
+                    <span>{{'CRUD.CAMPO-OBRIGATORIO' | translate}}.</span>
+                  </div>
+                </div>
+              </md-input-container>
               <md-input-container class="md-block">
                   <label>{{'CAD_EMPRESA.ENDERECO' | translate }}</label>
                   <textarea ng-model="vm.empresa.endereco" columns="1" md-maxlength="150" rows="5"></textarea>
@@ -79,7 +88,7 @@
 
                 <md-input-container flex>
                   <label>{{'CAD_EMPRESA.ESTADO' | translate }}</label>
-                  <md-select ng-model="vm.basicForm.state">
+                  <md-select ng-model="vm.empresa.estado">
                     <md-option ng-repeat="state in vm.states" value="{{state.abbrev}}">
                       {{state.abbrev}}
                     </md-option>
@@ -88,7 +97,7 @@
 
                 <md-input-container flex>
                   <label>{{'CAD_EMPRESA.CEP' | translate }}</label>
-                  <input name="postalcode" ng-model="vm.basicForm.postalCode" required ng-pattern="/^[0-9]{5}$/" md-maxlength="5">
+                  <input name="postalcode" ng-model="vm.empresa.cep" required ng-pattern="/^[0-9]{5}$/" md-maxlength="5">
                   <div ng-messages="basicForm.postalcode.$error" role="alert" multiple>
                     <div ng-message="required"><span>You must supply a postal code.</span></div>
                     <div ng-message="pattern"><span>That doesn't look like a valid postal code.</span></div>
@@ -101,7 +110,7 @@
 
               <md-input-container class="md-block">
                 <label>{{'CAD_EMPRESA.EMAIL' | translate }}</label>
-                <textarea ng-model="vm.basicForm.biography" columns="1" md-maxlength="150" rows="5"></textarea>
+                <textarea ng-model="vm.empresa.email" columns="1" md-maxlength="150" rows="5"></textarea>
               </md-input-container>
 
               <md-button type="submit" class="md-raised md-accent" aria-label="Submit" ng-disabled="basicForm.$invalid || basicForm.$pristine">
